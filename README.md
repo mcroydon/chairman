@@ -3,7 +3,7 @@ Chairman
 
 A small demo project using [BlueEyes](https://github.com/jdegoes/blueeyes), a lightweight [Scala](http://www.scala-lang.org/) web framework inspired by [Sinatra](http://www.sinatrarb.com/) and [Scalatra](https://github.com/scalatra/scalatra) that uses one of my favorite async networking libraries [Netty](http://www.jboss.org/netty).
 
-Chairman is based on the demo code provided in [BlueEyesDemo.scala](https://github.com/jdegoes/blueeyes/blob/master/src/main/scala/blueeyes/demo/BlueEyesDemo.scala).  It includes an sbt configuration based on [a gist by michaelklishin](https://gist.github.com/1063337) and `com.postneo.chairman.ChairmanServer` is a good example of a minimally useful read-only web service.
+Chairman is based on the demo code provided in [BlueEyesDemo.scala](https://github.com/jdegoes/blueeyes/blob/master/src/main/scala/blueeyes/demo/BlueEyesDemo.scala).  It includes an sbt configuration based on [a gist by michaelklishin](https://gist.github.com/1063337). If you're looking for a minimally useful example of a read-only web service, `com.postneo.chairman.ChairmanServer` might be helpful.
 
 While it doesn't do anything particularly useful I hope that it's helpful to others looking for a simple example BlueEyes project.
 
