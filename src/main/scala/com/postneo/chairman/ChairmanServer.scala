@@ -10,6 +10,8 @@ import blueeyes.core.http.MimeTypes._
 import blueeyes.core.http.{HttpStatus, HttpRequest, HttpResponse}
 import blueeyes.core.service.ServerHealthMonitorService
 import blueeyes.json.JsonAST._
+import java.util.Date
+import java.text.SimpleDateFormat
 import net.lag.configgy.ConfigMap
 
 object ChairmanServer extends BlueEyesServer with ChairmanService with ServerHealthMonitorService {
@@ -30,6 +32,17 @@ trait ChairmanService extends BlueEyesServiceBuilder with HttpRequestCombinators
                         get { request: HttpRequest[ByteChunk] =>
                             Future.sync(HttpResponse[JValue](
                                 content = Some(JArray(List("Hello", "BlueEyes!")))
+                            ))
+                        }
+                    }
+                } ~
+                path("/time/") {
+                    produce(application/json) {
+                        get { request: HttpRequest[ByteChunk] =>
+                            val now = new Date
+                            val format = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z")
+                            Future.sync(HttpResponse[JValue](
+                                content = Some(JArray(List(format.format(now))))
                             ))
                         }
                     }
