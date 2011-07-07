@@ -16,3 +16,8 @@ Getting and running Chairman
 4. Change to the Chairman directory: `cd chairman`
 5. Update dependencies and run: `sbt run`
 6. Check out the demo URLs at `http://127.0.0.1:8888/test/` and `http://127.0.0.1:8888/time/`.
+
+License
+-------
+
+Chairman is based on example code from the BlueEyes project and is released under the MIT license.
